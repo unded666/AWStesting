@@ -46,6 +46,8 @@ def run_through_boto3():
 if __name__ == '__main__':
 
     print(s3url)
-    df = run_through_pandas()
-    #df = run_through_boto3()
+    df1 = run_through_pandas()
+    df2 = run_through_boto3()
+    print(df1.shape)
+    print(df2.shape)
 
