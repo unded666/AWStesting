@@ -7,11 +7,14 @@ import pandas as pd
 #                         in %USERPROFILE%/.aws/credentials (windows)
 # credentials needs to contain:
 #   [PROFILENAME]
-#   aws_access_key_id
-#   aws_secret_access_key
-#   aws_session_token
+#   aws_access_key_id=
+#   aws_secret_access_key=
+#   aws_session_token=
 #
-#  PROFILENAME works easiest as "default", needs a bit of fiddling to work as othe forms...
+#  PROFILENAME works easiest as "default", needs a bit of fiddling to work as other forms...
+#
+# set environment variables in Pycharm through the following if necessary (useful in Windows)
+# Preferences -> Build, Execution, Deployment -> Console -> Python Console
 
 FULL_URL = 's3://arcablanca-barchester-dcv-data-repo/full_dataset.csv'
 BUCKET = 'arcablanca-barchester-dcv-data-repo'
@@ -43,6 +46,6 @@ def run_through_boto3():
 if __name__ == '__main__':
 
     print(s3url)
-    #df = run_through_pandas()
-    df = run_through_boto3()
+    df = run_through_pandas()
+    #df = run_through_boto3()
 
